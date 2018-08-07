@@ -79,7 +79,7 @@
 /*........header..............*/
 .wrapp-header {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background: url("../img/header_bg.png") center center no-repeat;
   -webkit-background-size: cover;
@@ -270,7 +270,7 @@
 /*........abut-us................*/
 .wrapp-about-me {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background-color: #22252c; }
   .wrapp-about-me .about-me {
@@ -446,7 +446,7 @@
 /*...........education...........*/
 .wrapp-education {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background-color: #313741;
   overflow: hidden; }
@@ -739,7 +739,7 @@
 /*...............work...............*/
 .wrapp-work {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background-color: #22252c;
   overflow: hidden; }
@@ -765,7 +765,7 @@
 /*...........prof-sills...........*/
 .wrapp-prof-skills {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background-color: #22252c;
   overflow: hidden; }
@@ -870,7 +870,7 @@
 /*...........portfolio...............*/
 .wrapp-portfolio {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background-color: #22252c;
   overflow: hidden; }
@@ -1016,7 +1016,7 @@
 /*..........contact me...............*/
 .wrapp-contact {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background-color: #22252c;
   overflow: hidden; }
@@ -1177,7 +1177,7 @@
 /*.................footer.............*/
 .wrapp-footer {
   width: 100%;
-  max-width: 1600px;
+  /*max-width: 1600px;*/
   margin: 0 auto;
   background-color: #22252c;
   overflow: hidden; }
