@@ -1,60 +1,22 @@
-<?php
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message= $_POST['message'];
-if (isset ($name))
-{
-    $name = substr($name,0,40); //etc length
-    if (empty($name))
-    {
-        echo "<center><b>Не указано имя !!!<BR><p>";
-        exit;
-    }
-}
-else
-{
-    $name = "не указано";
-}
-if (isset ($email))
-{
-    $email = substr($email,0,40);
-    if (empty($email))
-    {
-        echo "<center><b>Не указан адрес электронной почты!!!<BR><p>";
-        exit;
-    }
-}
-else
-{
-    $email = "не указано";
+<?php 
+
+if(isset($_POST['submit'])){
+    $to = "dmitriy1a222221@gmail.com"; // Здесь нужно написать e-mail, куда будут приходить письма
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['name'];
+    $subject = "Форма отправки сообщений с сайта";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " оставил сообщение:" . "\n\n" . $_POST['maessage'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['maessage'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+	
+    mail($to,$subject,$message,$headers);
+   // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender - Отключено!
+    echo "Сообщение отправлено. Спасибо Вам " . $first_name . ", мы скоро свяжемся с Вами.";
+	echo "<br /><br /><a href='https://epicblog.net'>Вернуться на сайт.</a>";
+
 }
 
-if (isset ($message))
-{
-    $message= substr($message,0,10000);
-    if (empty($message))
-    {
-        echo "<center><b>Вы не указали сообщение!!!<BR><p>";
-        exit;
-    }
-}
-else
-{
-    $message= "не указано";
-}
-$i = "не указано";
-if ($name == $i AND $email == $i AND $message == $i)
-{
-    echo "Внимание! Произошла ошибка! Вы не заполнили все поля!<BR>";
-    exit;
-}
-$to = "dmitriy1a222221@gmail.com";
-$subject = "Сообщение с сайта DaDecor";
-$text_message = "
-   Имя заказчика: $name \n
-   Электронный адрес: $email \n
-   Текст сообщения: $message;
-mail ($to, $subject, $text_message,"Content-type:text/plain; charset = UTF-8") or print "Не могу отправить письмо !!!";
-echo "<center><b>Спасибо за то, что написали нам! <br><br> Для нас это очень важно! <br><br> В ближайшее время с Вами обязательно свяжутся для уточнения заказа.";
-exit;
 ?>
